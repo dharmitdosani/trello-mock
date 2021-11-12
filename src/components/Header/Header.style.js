@@ -8,11 +8,6 @@ export const HeaderContainer = styled.header`
   align-items: center;
   justify-content: flex-end;
   padding: 15px;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
 `;
 
 export const StyledLogoLink = styled(Link)`
