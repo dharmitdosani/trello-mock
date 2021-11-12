@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AppContainer = styled.div`
+  background-color: ${({ boardColor }) => (boardColor ? boardColor : "")};
   width: 100vw;
   height: 100vh;
 `;
