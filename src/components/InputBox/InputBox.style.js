@@ -10,6 +10,7 @@ export const InputForm = styled.div`
   width: 100%;
   height: calc(100% + ${actionsHeight});
   cursor: initial;
+  border-radius: 4px;
   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.5);
 `;
@@ -38,6 +39,7 @@ export const AddButton = styled.button`
   padding: 4px 8px;
   cursor: pointer;
   margin-left: 12px;
+  border-radius: 4px;
 
   &:disabled {
     cursor: not-allowed;

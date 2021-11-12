@@ -45,6 +45,7 @@ export const AddCardButton = styled.div`
   cursor: pointer;
   border-radius: 4px;
   margin: 10px 0;
+  position: relative;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.2);
