@@ -51,3 +51,19 @@ export const AddCardButton = styled.div`
     background-color: rgba(0, 0, 0, 0.2);
   }
 `;
+
+export const AddListButton = styled.div`
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  min-width: 300px;
+  height: fit-content;
+  margin: 20px 20px 0 0;
+  padding: 10px;
+  color: ${THEME.TEXT_SECONDARY};
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+`;
