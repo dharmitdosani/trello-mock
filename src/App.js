@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import { AppContainer, AppContent } from "./App.style";
 import { ROUTES } from "./values/routes";
-import Homepage from "./pages/Homepage/Homepage";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Header />
         <AppContent>
           <Routes>
-            <Route exact path={ROUTES.HOME} element={<Homepage />} />
+            <Route exact path={ROUTES.HOME} element={<HomePage />} />
           </Routes>
         </AppContent>
       </AppContainer>

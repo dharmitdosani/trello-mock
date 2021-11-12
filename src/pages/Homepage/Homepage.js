@@ -2,10 +2,10 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import BoardCard from "../../components/BoardCard/BoardCard";
 import { TITLE_MODES } from "../../components/PageTitle/PageTitle.config";
 import NewBoardCard from "../../components/BoardCard/NewBoardCard";
-import { CardListContainer } from "./Homepage.style";
-import { tempBoardList } from "./Homepage.config";
+import { CardListContainer } from "./HomePage.style";
+import { tempBoardList } from "./HomePage.config";
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <>
       <PageTitle mode={TITLE_MODES.DARK}>All Boards</PageTitle>
@@ -19,4 +19,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
