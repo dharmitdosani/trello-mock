@@ -10,7 +10,12 @@ export const COLORS = {
   MULBERRY: "#CD5A91",
   ATHENS_GRAY: "#EBECF0",
   SHUTTLE_GRAY: "#5E6C84",
+  SILVER: "#C4C4C4",
   WHITE: "#FFFFFF",
+  BLACK: "#000000",
 };
 
-export const THEME = {};
+export const THEME = {
+  TEXT_PRIMARY: COLORS.NILE_BLUE,
+  TEXT_SECONDARY: COLORS.WHITE,
+};
