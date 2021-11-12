@@ -10,7 +10,7 @@ export const CardLink = styled(Link)`
   border-radius: 4px;
   display: inline-block;
   margin: 20px 20px 0 0;
-  background-color: ${({ boardColor }) => boardColor};
+  background-color: ${({ $boardColor }) => $boardColor};
   text-decoration: none;
 `;
 
@@ -33,15 +33,15 @@ export const EmptyBoardCard = styled.div`
   cursor: pointer;
   padding: 20px;
   border-radius: 4px;
-  display: inline-block;
   margin: 20px 20px 0 0;
-
+  border: none;
+  outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-weight: bold;
-
+  font-size: 16px;
   color: ${COLORS.BLACK};
   background-color: ${COLORS.ATHENS_GRAY};
+  position: relative;
 `;
