@@ -4,7 +4,7 @@ import { COLORS, THEME } from "../../values/colors";
 export const List = styled.div`
   display: flex;
   flex-direction: column;
-  width: 300px;
+  min-width: 300px;
   height: fit-content;
   max-height: calc(100% - 20px); // 20px is margin top
   margin: 20px 20px 0 0;
@@ -30,6 +30,7 @@ export const Card = styled.div`
   padding: 10px;
   border-radius: 4px;
   margin-top: 10px;
+  box-shadow: 0 1px 0 ${COLORS.SILVER};
 
   &:first-of-type {
     margin-top: 0;
