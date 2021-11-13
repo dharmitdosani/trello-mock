@@ -23,7 +23,7 @@ const BoardPage = () => {
     <>
       <PageTitle mode={TITLE_MODES.DARK}>{currentBoard.title}</PageTitle>
       <BoardListsContainer>
-        {currentBoard.cardLists.map((list) => (
+        {currentBoard.lists.map((list) => (
           <CardList key={list.id} {...list} />
         ))}
         <AddList />

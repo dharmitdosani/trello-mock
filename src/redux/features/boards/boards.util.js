@@ -5,5 +5,5 @@ export const getNewBoard = (title) => ({
   id: getRandomId(),
   title,
   boardColor: COLORS.LOCHMARA,
-  cardLists: [],
+  lists: [],
 });
