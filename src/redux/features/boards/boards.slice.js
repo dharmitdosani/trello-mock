@@ -1,12 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { BOARD_SLICE } from "./boards.config";
-import { getNewBoard } from "./boards.util";
 
-const newBoard = getNewBoard("dummy board 1");
-
-const initialState = {
-  [newBoard.id]: newBoard,
-};
+const initialState = {};
 
 export const boardsSlice = createSlice({
   name: BOARD_SLICE,
@@ -16,7 +11,7 @@ export const boardsSlice = createSlice({
       state[action.payload.id] = action.payload;
     },
     addListToBoard: (state, action) => {
-      state[action.payload.boardId].cardList.push(action.payload.listId);
+      state[action.payload.boardId].lists.push(action.payload.listId);
     },
   },
 });

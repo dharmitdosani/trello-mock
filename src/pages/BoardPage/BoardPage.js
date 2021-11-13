@@ -8,25 +8,30 @@ import { TITLE_MODES } from "../../components/PageTitle/PageTitle.config";
 import { BOARD_SLICE } from "../../redux/features/boards/boards.config";
 import { ROUTES } from "../../values/routes";
 import { BoardListsContainer } from "./BoardPage.style";
-import { boardLists } from "./BoardPage.config";
+import { LISTS_SLICE } from "../../redux/features/lists/lists.config";
+import { getArrFromObj } from "../../utils/utils";
 
 const BoardPage = () => {
-  const { id } = useParams();
+  const { id: boardId } = useParams();
   const allBoards = useSelector((state) => state[BOARD_SLICE]);
-  const currentBoard = allBoards[id];
+  const currentBoard = allBoards[boardId];
 
-  console.log("currentBoard: ", currentBoard);
+  const allLists = useSelector((state) => state[LISTS_SLICE]);
 
   if (!currentBoard) return <Navigate to={ROUTES.HOME} replace={true} />;
+
+  const currentLists = getArrFromObj(allLists).filter((listItem) =>
+    currentBoard.lists.includes(listItem.id)
+  );
 
   return (
     <>
       <PageTitle mode={TITLE_MODES.DARK}>{currentBoard.title}</PageTitle>
       <BoardListsContainer>
-        {currentBoard.lists.map((list) => (
+        {currentLists.map((list) => (
           <CardList key={list.id} {...list} />
         ))}
-        <AddList />
+        <AddList boardId={boardId} />
       </BoardListsContainer>
     </>
   );
