@@ -1,25 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { COLORS } from "../../../values/colors";
-import { getRandomId } from "../../../utils/utils";
 import { BOARD_SLICE } from "./boards.config";
+import { getNewBoard } from "./boards.util";
 
-// SINGLE BOARDS ITEM
-// [randomId]: {
-//   id: randomId,
-//   title: "board 1",
-//   boardColor: COLORS.LOCHMARA,
-//   cardLists: [],
-// },
-
-const randomId = getRandomId();
+const newBoard = getNewBoard("dummy board 1");
 
 const initialState = {
-  [randomId]: {
-    id: randomId,
-    title: "board 1",
-    boardColor: COLORS.LOCHMARA,
-    cardLists: [],
-  },
+  [newBoard.id]: newBoard,
 };
 
 export const boardsSlice = createSlice({
