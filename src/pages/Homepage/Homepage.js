@@ -8,14 +8,14 @@ import { BOARD_SLICE } from "../../redux/features/boards/boards.config";
 import { getArrFromObj } from "../../utils/utils";
 
 const HomePage = () => {
-  const boardsListObj = useSelector((state) => state[BOARD_SLICE]);
+  const allBoards = useSelector((state) => state[BOARD_SLICE]);
 
   return (
     <>
       <PageTitle mode={TITLE_MODES.DARK}>All Boards</PageTitle>
       <CardListContainer>
         <NewBoardCard />
-        {getArrFromObj(boardsListObj).map((cardProps) => (
+        {getArrFromObj(allBoards).map((cardProps) => (
           <BoardCard {...cardProps} key={cardProps.id} />
         ))}
       </CardListContainer>
