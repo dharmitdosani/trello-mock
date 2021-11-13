@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { createCard } from "../../redux/features/cards/cards.slice";
+import { getNewCard } from "../../redux/features/cards/cards.util";
+import { addCardToList } from "../../redux/features/lists/lists.slice";
 import InputBox from "../InputBox/InputBox";
 import { AddCardButton } from "./CardList.style";
 
-const AddCard = () => {
+const AddCard = ({ listId }) => {
   const [showInput, setShowInput] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleSubmit = (value) => {
-    console.log(value);
+  const handleSubmit = (text) => {
+    const newCard = getNewCard(text);
+    dispatch(createCard(newCard));
+    dispatch(addCardToList({ listId, cardId: newCard.id }));
     setShowInput(false);
   };
 

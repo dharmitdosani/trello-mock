@@ -1,7 +1,7 @@
 import { getRandomId } from "../../../utils/utils";
 
 export const getNewList = (title) => ({
-  id: getRandomId(),
+  id: getRandomId("list"),
   title,
   cards: [],
 });

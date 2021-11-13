@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 function App() {
   const finalState = useSelector((state) => state);
-  console.log("finalState: ", finalState);
+  console.log("store: ", finalState);
 
   return (
     <BrowserRouter>

@@ -7,6 +7,7 @@ export const getInitials = (str) => {
     .toUpperCase();
 };
 
-export const getRandomId = () => `id${new Date().getTime()}`;
+export const getRandomId = (prefix = "") =>
+  `${prefix}_id_${new Date().getTime()}`;
 
 export const getArrFromObj = (obj) => Object.values(obj);

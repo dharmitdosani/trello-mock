@@ -11,7 +11,6 @@ const AddList = ({ boardId }) => {
   const dispatch = useDispatch();
 
   const handleSubmit = (title) => {
-    console.log("new list: ", title);
     const newList = getNewList(title);
     dispatch(createList(newList));
     dispatch(addListToBoard({ boardId, listId: newList.id }));

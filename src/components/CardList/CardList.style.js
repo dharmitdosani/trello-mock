@@ -5,6 +5,7 @@ export const List = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 300px;
+  max-width: 300px;
   height: fit-content;
   max-height: calc(100% - 20px); // 20px is margin top
   margin: 20px 20px 0 0;
