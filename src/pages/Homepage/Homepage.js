@@ -3,15 +3,19 @@ import BoardCard from "../../components/BoardCard/BoardCard";
 import { TITLE_MODES } from "../../components/PageTitle/PageTitle.config";
 import NewBoardCard from "../../components/BoardCard/NewBoardCard";
 import { CardListContainer } from "./HomePage.style";
-import { tempBoardList } from "./HomePage.config";
+import { useSelector } from "react-redux";
+import { BOARD_SLICE } from "../../redux/features/boards/boards.config";
+import { getArrFromObj } from "../../utils/utils";
 
 const HomePage = () => {
+  const boardsListObj = useSelector((state) => state[BOARD_SLICE]);
+
   return (
     <>
       <PageTitle mode={TITLE_MODES.DARK}>All Boards</PageTitle>
       <CardListContainer>
         <NewBoardCard />
-        {tempBoardList.map((cardProps) => (
+        {getArrFromObj(boardsListObj).map((cardProps) => (
           <BoardCard {...cardProps} key={cardProps.id} />
         ))}
       </CardListContainer>

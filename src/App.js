@@ -4,8 +4,12 @@ import { AppContainer, AppContent } from "./App.style";
 import { ROUTES } from "./values/routes";
 import HomePage from "./pages/HomePage/HomePage";
 import BoardPage from "./pages/BoardPage/BoardPage";
+import { useSelector } from "react-redux";
 
 function App() {
+  const finalState = useSelector((state) => state);
+  console.log("finalState: ", finalState);
+
   return (
     <BrowserRouter>
       <AppContainer>
